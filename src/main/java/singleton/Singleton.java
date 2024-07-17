@@ -1,12 +1,12 @@
 package singleton;
 
-// TODO: Implement/Modify the Singleton class to ensure that only one instance of the class can be created with a valued "name" property.
+// TODO: Implement/Modify the Singleton class to ensure that only one instance of the class can be created
 public class Singleton {
 
-    private String name;
-
-    // suppose that this is the only function I need when using it
-    public String getName() {
-        return name;
+    /**
+     * Supposing this is the only material method needed, which is to get the identifier of the instance of Singleton class.
+     */
+    public String getInstanceIdentifier() {
+        return Singleton.class.getName() + "@" + Integer.toHexString(System.identityHashCode(this));
     }
 }
